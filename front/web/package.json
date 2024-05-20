@@ -1,0 +1,53 @@
+{
+  "name": "IMPACT",
+  "version": "1.0.0",
+  "description": "Sistema IMPACT",
+  "productName": "IMPACT",
+  "cordovaId": "n",
+  "author": "Ant.com.mx",
+  "private": true,
+  "scripts": {
+    "lint": "eslint --ext .js,.vue src",
+    "test": "echo \"No test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "apexcharts": "^3.25.0",
+    "autoprefixer": "^9.4.7",
+    "axios": "^0.18.0",
+    "npm": "^5.10.0",
+    "v-money": "^0.8.1",
+    "vue-apexcharts": "^1.6.0",
+    "vue-dragscroll": "^1.8.3",
+    "vue-google-heatmap": "^1.0.1",
+    "vue-i18n": "^7.8.1",
+    "vue-moment": "^3.2.0",
+    "vue-nvd3": "^1.0.0",
+    "vue2-gmap-custom-marker": "^5.3.1",
+    "vue2-google-maps": "^0.10.2",
+    "vuelidate": "^0.7.3"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "eslint": "^4.18.2",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-friendly-formatter": "^3.0.0",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    "eslint-plugin-vue": "^4.7.0",
+    "prettier": "^1.12.0",
+    "quasar-cli": "^0.15.20"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+    "require": {
+        "firebase/php-jwt": "^5.0",
+        "swiftmailer/swiftmailer": "^5.4",
+        "setasign/fpdf": "1.8.1"
+    }
+}

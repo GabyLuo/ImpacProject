@@ -1,0 +1,6 @@
+[database]
+adapter  = Postgresql
+host     = localhost
+username = username
+password = password
+dbname   = dbname

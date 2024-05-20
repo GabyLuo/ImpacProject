@@ -1,0 +1,611 @@
+// app global css
+
+.q-table-top .q-table-control
+  padding 0
+
+.q-table
+  td .q-btn
+    padding 4px 6px
+
+@media (min-width: 1200px) {
+  .layout-padding {
+    padding: 2.5rem 2.5rem;
+    margin: auto;
+  }
+}
+
+div.q-input
+  margin-bottom 5px
+
+#sticky-table-scroll-corto .q-table th{
+  position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    background: lightgrey;
+    z-index: 1;
+  font-size: 0.95em;
+}
+
+#sticky-table-scroll-corto .q-table-middle.scroll{
+  height: 25vh;
+}
+
+#sticky-table-scroll-corto .q-table tbody td {
+  white-space: normal;  
+  font-size: 0.75em;
+}
+
+#sticky-table-scroll-corto .q-table thead, #sticky-table-scroll-corto .q-table tr, #sticky-table-scroll-corto .q-table th, #sticky-table-scroll-corto .q-table td {
+  height: 30px !important;
+}
+
+
+#sticky-table-scroll .q-table th{
+  position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    background: lightgrey;
+    z-index: 1;
+  font-size: 0.95em;
+}
+
+#sticky-table-scroll .q-table-middle.scroll{
+  height: 55vh;
+}
+
+#sticky-table-scroll .q-table tbody td {
+  white-space: normal;  
+  font-size: 0.75em;
+}
+
+#sticky-table-scroll .q-table thead, #sticky-table-scroll .q-table tr, #sticky-table-scroll .q-table th, #sticky-table-scroll .q-table td {
+  height: 30px !important;
+}
+
+#sticky-arbol .q-table th{
+  position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    background: lightgrey;
+    z-index: 1;
+  font-size: 0.95em;
+}
+
+#sticky-arbol .q-table-middle.scroll{
+  height: 55vh;
+}
+
+#sticky-arbol .q-table tbody td {
+  font-size: 0.75em;
+}
+
+#sticky-arbol .q-table thead, #sticky-arbol .q-table tr, #sticky-arbol .q-table th, #sticky-arbol .q-table td {
+  height: 30px !important;
+}
+
+.q-list-link > .q-item:hover, .q-item-link:hover
+  background-color rgba(200, 200, 200, 0.5)
+
+.q-list-header
+  padding 0px
+  .q-list-header-helper
+    padding 15px 16px
+    cursor pointer
+    &:hover
+      background-color #f1f1f1
+
+.q-item-label
+  font-size 14px
+  font-weight normal
+  letter-spacing .025em
+  font-weight normal
+  padding-left 7px
+
+.q-item.active, .q-item.router-link-active, .q-item:focus
+  background-color rgba(70, 70, 70, 0.4)
+
+.q-item-extend
+  color #515253
+
+.q-field
+  .q-field-icon
+    width 1.4em
+    min-width 1.4em
+    font-size: 1.4em
+    margin-right 1px
+    margin-left 10px
+
+.q-field
+  .q-select
+    margin-bottom 5px
+
+.pull-right
+  text-align right
+
+ .q-input.q-own-control, .q-select.q-own-control, .q-datetime-input.q-own-control
+  margin-right 6px
+
+.a-dash
+  color rgba(10, 10, 10, 0.5) !important
+
+.subtitulos
+  color: rgba(0,0,0,0.8) !important
+  font-weight: bold
+  font-size:0.9em;
+
+.inputgrande
+  font-size:30px;
+
+.subtitulos_subtitulos
+  color: rgba(20,40,50,0.8) !important
+  font-weight: bold
+  font-size: 1em
+  margin-left: 6%
+
+.subtitulos_subtitulos_subtitulos
+  color: rgba(20,40,50,0.8) !important
+  font-weight: bold
+  font-size: 0.8em
+  margin-left: 8%
+
+.full
+  width: 100%
+  height: 90vh
+
+.full2
+  width: 50%;
+  height: 50vh;
+  margin-left: auto
+  margin-right: auto
+  display: block
+  image-orientation: from-image;
+
+.loader
+  border: 16px solid #f3f3f3
+  border-top: 16px solid #3498db
+  border-radius: 50%
+  width: 120px
+  height: 120px
+  animation: spin 2s linear infinite
+
+@keyframes spin
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+
+.comentario
+  text-transform: uppercase
+  width: 100%
+  height: 70px
+
+/*Zoom*/
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  width: 100%;
+  height: 70vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  cursor: default;
+  cursor: grab;
+  cursor: -o-grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.main img {
+  height: auto;
+  width: 100%;
+}
+
+
+.btn_nuevo {
+  background-color: rgba(51, 122, 183, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.btn_categoria {
+  background-color: rgba(8, 85, 134, 1); 
+  color: rgba(255, 255, 255, 1);
+}
+
+.btn_guardar {
+  background-color: rgba(92, 184, 92, 1);
+  color: rgba(255, 255, 255, 1);
+}
+.btn_atach {
+  background-color: #424242;
+  color:white;
+}
+.btn_regresar {
+  background:#085586;
+  color: white;
+}
+.btn_solicitar {
+  background:#24BEC8;
+  color: white;
+}
+.btn_rechazar {
+  background-color: #F04614;
+  color: white;
+}
+.btn_cancelar {
+  background-color: #B0081C;
+  color: white;
+}
+.btn_pagar {
+  background-color: rgba(92, 184, 92, 1);
+  color: white;
+}
+.btn_actualizar {
+  background:#F0AD4E;
+  color: white;
+}
+
+.btn_limpiar {
+  background:#DC3545;
+  color: white;
+}
+
+.moneyError {
+  background: #DB2828;
+  color:white;
+}
+
+.moneyBien {
+  background: #424242;
+  color:white;
+}
+
+.icono_field .q-field .q-field-icon {
+  margin-top:17px;
+}
+
+.fs28 {
+  font-size: 24px;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url(./fonts/Nunito-Regular.ttf);
+}
+
+body {
+  font-family: 'Nunito';
+}
+// app global css
+
+.q-table-top .q-table-control
+  padding 0
+
+.q-table
+  td .q-btn
+    padding 4px 6px
+
+@media (min-width: 1200px) {
+  .layout-padding {
+    padding: 2.5rem 2.5rem;
+    margin: auto;
+  }
+}
+
+div.q-input
+  margin-bottom 5px
+
+#sticky-table-scroll-corto .q-table th{
+  position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    background: lightgrey;
+    z-index: 1;
+  font-size: 0.95em;
+}
+
+#sticky-table-scroll-corto .q-table-middle.scroll{
+  height: 25vh;
+}
+
+#sticky-table-scroll-corto .q-table tbody td {
+  white-space: normal;  
+  font-size: 0.75em;
+}
+
+#sticky-table-scroll-corto .q-table thead, #sticky-table-scroll-corto .q-table tr, #sticky-table-scroll-corto .q-table th, #sticky-table-scroll-corto .q-table td {
+  height: 30px !important;
+}
+
+
+#sticky-table-scroll .q-table th{
+  position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    background: lightgrey;
+    z-index: 1;
+  font-size: 0.95em;
+}
+
+#sticky-table-scroll .q-table-middle.scroll{
+  height: 55vh;
+}
+
+#sticky-table-scroll .q-table tbody td {
+  white-space: normal;  
+  font-size: 0.75em;
+}
+
+#sticky-table-scroll .q-table thead, #sticky-table-scroll .q-table tr, #sticky-table-scroll .q-table th, #sticky-table-scroll .q-table td {
+  height: 30px !important;
+}
+
+
+#sticky-arbol .q-table th{
+  position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    background: lightgrey;
+    z-index: 1;
+  font-size: 0.95em;
+}
+
+#sticky-arbol .q-table-middle.scroll{
+  height: 55vh;
+}
+
+#sticky-arbol .q-table tbody td {
+  font-size: 0.75em;
+}
+
+#sticky-arbol .q-table thead, #sticky-arbol .q-table tr, #sticky-arbol .q-table th, #sticky-arbol .q-table td {
+  height: 30px !important;
+}
+
+.q-list-link > .q-item:hover, .q-item-link:hover
+  background-color rgba(200, 200, 200, 0.5)
+
+.q-list-header
+  padding 0px
+  .q-list-header-helper
+    padding 15px 16px
+    cursor pointer
+    &:hover
+      background-color #f1f1f1
+
+.q-item-label
+  font-size 14px
+  font-weight normal
+  letter-spacing .025em
+  font-weight normal
+  padding-left 7px
+
+.q-item.active, .q-item.router-link-active, .q-item:focus
+  background-color rgba(70, 70, 70, 0.4)
+
+.q-item-extend
+  color #515253
+
+.q-field
+  .q-field-icon
+    width 1.4em
+    min-width 1.4em
+    font-size: 1.4em
+    margin-right 1px
+    margin-left 10px
+
+.q-field
+  .q-select
+    margin-bottom 5px
+
+.pull-right
+  text-align right
+
+ .q-input.q-own-control, .q-select.q-own-control, .q-datetime-input.q-own-control
+  margin-right 6px
+
+.a-dash
+  color rgba(10, 10, 10, 0.5) !important
+
+.subtitulos
+  color: rgba(0,0,0,0.8) !important
+  font-weight: bold
+  font-size:0.9em;
+
+.inputgrande
+  font-size:30px;
+
+.subtitulos_subtitulos
+  color: rgba(20,40,50,0.8) !important
+  font-weight: bold
+  font-size: 1em
+  margin-left: 6%
+
+.subtitulos_subtitulos_subtitulos
+  color: rgba(20,40,50,0.8) !important
+  font-weight: bold
+  font-size: 0.8em
+  margin-left: 8%
+
+.full
+  width: 100%
+  height: 90vh
+
+.full2
+  width: 50%;
+  height: 50vh;
+  margin-left: auto
+  margin-right: auto
+  display: block
+  image-orientation: from-image;
+
+.loader
+  border: 16px solid #f3f3f3
+  border-top: 16px solid #3498db
+  border-radius: 50%
+  width: 120px
+  height: 120px
+  animation: spin 2s linear infinite
+
+@keyframes spin
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+
+.comentario
+  text-transform: uppercase
+  width: 100%
+  height: 70px
+
+/*Zoom*/
+
+.main {
+  padding: 16px;
+  margin-top: 30px;
+  width: 100%;
+  height: 70vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  cursor: default;
+  cursor: grab;
+  cursor: -o-grab;
+  cursor: -moz-grab;
+  cursor: -webkit-grab;
+}
+
+.main img {
+  height: auto;
+  width: 100%;
+}
+
+
+.btn_nuevo {
+  background-color: rgba(51, 122, 183, 1);
+  color: rgba(255, 255, 255, 1);
+}
+
+.btn_categoria {
+  background-color: rgba(8, 85, 134, 1); 
+  color: rgba(255, 255, 255, 1);
+}
+
+.btn_guardar {
+  background-color: rgba(92, 184, 92, 1);
+  color: rgba(255, 255, 255, 1);
+}
+.btn_atach {
+  background-color: #424242;
+  color:white;
+}
+.btn_regresar {
+  background:#085586;
+  color: white;
+}
+.btn_solicitar {
+  background:#24BEC8;
+  color: white;
+}
+.btn_rechazar {
+  background-color: #F04614;
+  color: white;
+}
+.btn_cancelar {
+  background-color: #B0081C;
+  color: white;
+}
+.btn_pagar {
+  background-color: rgba(92, 184, 92, 1);
+  color: white;
+}
+.btn_actualizar {
+  background:#F0AD4E;
+  color: white;
+}
+
+.btn_limpiar {
+  background:#DC3545;
+  color: white;
+}
+
+.moneyError {
+  background: #DB2828;
+  color:white;
+}
+
+.moneyBien {
+  background: #424242;
+  color:white;
+}
+
+.icono_field .q-field .q-field-icon {
+  margin-top:17px;
+}
+
+.fs28 {
+  font-size: 24px;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url(./fonts/Nunito-Regular.ttf);
+}
+
+body {
+  font-family: 'Nunito';
+}
+
+#sticky-table-newstyle .q-table th{
+  position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    background: rgba(8,85,134,1);
+    z-index: 1;
+  font-size: 0.95em;
+}
+
+#sticky-table-newstyle .q-table-middle.newstyle{
+  height: 55vh;
+}
+
+#sticky-table-newstyle {
+  // height: 55vh;
+}
+
+#sticky-table-newstyle .q-table tbody td {
+  white-space: normal;  
+  font-size: 0.75em;
+}
+
+#sticky-table-newstyle .q-table thead, #sticky-table-newstyle .q-table tr, #sticky-table-newstyle .q-table th, #sticky-table-newstyle .q-table td {
+  height: 30px !important;
+}
+
+#sticky-table-newstyle .q-table thead, #sticky-table-newstyle .q-table th {
+  color: #FFFFFF;
+}
+
+.page-title {
+  color #444444;
+  font-size: 1.3em;
+}
+
+.border-panel{
+  border (1px solid rgba(0, 0, 0, 0.12))
+  box-shadow (0px 1px 2px rgba(0, 0, 0, 0.1))
+  border-radius 3px
+  }
+  .q-table th {
+  text-transform: uppercase;
+}
+.q-breadcrumbs-el{
+  font-size: 20 px;
+  font-weight: normal;
+}
+.q-page{
+  background-color: #eee;
+}
+.q-layout-page{
+  background-color: #eee;
+}
+.panel-header{
+  background-color: white;
+}
+.q-table th{
+  text-align: center;
+}

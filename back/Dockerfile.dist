@@ -1,0 +1,88 @@
+FROM php:7.3-apache
+ARG server_name
+ARG phalcon_version
+ENV TZ=America/Mexico_City
+
+RUN sed -i '/jessie-updates/d' /etc/apt/sources.list # Now archived
+RUN apt update
+
+RUN apt install -y \
+    apt-transport-https \
+    lsb-release \
+    ca-certificates \
+    wget \
+    curl \
+    nano \
+    dialog \
+    net-tools \
+    git \
+    sudo \
+    openssl \
+    libpcre3-dev \
+    tzdata \
+    cron
+
+ARG PHALCON_EXT_PATH=php7/64bits
+RUN set -xe && \
+        # Compile Phalcon
+        curl -LO https://github.com/phalcon/cphalcon/archive/v${phalcon_version}.tar.gz && \
+        tar xzf ${PWD}/v${phalcon_version}.tar.gz && \
+        docker-php-ext-install -j $(getconf _NPROCESSORS_ONLN) ${PWD}/cphalcon-${phalcon_version}/build/${PHALCON_EXT_PATH} && \
+        # Remove all temp files
+        rm -r \
+            ${PWD}/v${phalcon_version}.tar.gz \
+            ${PWD}/cphalcon-${phalcon_version}
+
+COPY php.ini /usr/local/etc/php
+
+RUN sed -i 's/memory_limit = 128M/memory_limit = 512M/' /usr/local/etc/php/php.ini
+RUN sed -i 's/display_errors = Off/display_errors = On/' /usr/local/etc/php/php.ini
+RUN sed -i 's/post_max_size = 8M/post_max_size = 30M/' /usr/local/etc/php/php.ini
+RUN sed -i 's/upload_max_filesize = 2M/upload_max_filesize = 30M/' /usr/local/etc/php/php.ini
+RUN echo "ServerName $server_name" >> /etc/apache2/apache2.conf
+
+#RUN ln -s /usr/bin/php7 /usr/bin/php
+#RUN apt-get install php-phar php-zlib
+RUN mkdir /tmp/composer && cd /tmp/composer && php -r "copy('https://getcomposer.org/installer', '/tmp/composer/composer-setup.php');"
+#RUN cd /tmp/composer && php7 -r "if (hash_file('sha384', '/tmp/composer/composer-setup.php') === 'e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+RUN cd /tmp/composer &&  php composer-setup.php --install-dir=/usr/local/bin --filename=composer && php -r "unlink('composer-setup.php');"
+
+RUN apt-get update \
+    && apt-get install -y libpq-dev \
+    && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
+    && docker-php-ext-install pdo pdo_pgsql pgsql \
+    && docker-php-ext-install mbstring
+
+RUN apt-get install -y libfreetype6-dev libjpeg62-turbo-dev \
+    && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
+    && docker-php-ext-install gd
+
+# Install unzip utility and libs needed by zip PHP extension
+RUN apt-get update && apt-get install -y \
+    zlib1g-dev \
+    libzip-dev \
+    unzip
+RUN docker-php-ext-install zip
+    
+# Copy default apache2
+COPY 000-default.conf /etc/apache2/sites-enabled/
+#COPY 000-default_ssl.conf /etc/apache2/sites-enabled/
+
+# Copy cron file to the cron.d directory
+COPY cron /etc/cron.d/cron
+
+# Give execution rights on the cron job
+RUN chmod 0644 /etc/cron.d/cron
+
+# Apply cron job
+RUN crontab /etc/cron.d/cron
+
+# Create the log file to be able to run tail
+RUN mkdir -p /var/log/cron
+
+# Add a command to base-image entrypont scritp
+RUN sed -i 's/^exec /service cron start\n\nexec /' /usr/local/bin/apache2-foreground
+
+RUN a2enmod rewrite
+RUN a2enmod ssl
+RUN cron start

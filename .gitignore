@@ -1,0 +1,8 @@
+.idea
+.git
+back/api/config.ini
+back/api/public/assets
+back/api/public/expedientes
+back/Dockerfile
+front/conf.d/default.conf
+docker-compose.yml

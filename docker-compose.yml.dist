@@ -1,0 +1,41 @@
+version: '3'
+networks:
+  common:
+    external:
+      name: common_network
+services:
+  front:
+    container_name: impact_front
+    build:
+      context: front/
+    restart: always
+    environment:
+      - TZ=America/Mexico_City
+    ports:
+      - 8020:80
+      #- 8120:8120
+      - 8520:443
+    volumes:
+      - ./front/web:/usr/share/nginx/html
+      - ./front/conf.d:/etc/nginx/conf.d
+      - ./ssl:/etc/nginx/ssl
+    networks:
+        - common
+    depends_on:
+      - back
+  back:
+     container_name: impact_back
+     build:
+       context: back/
+       args:
+         server_name: impact_back
+         phalcon_version: 3.4.2
+     restart: always
+     ports:
+       - 8220:80
+       # - 8620:443
+     volumes:
+       - ./back/api:/var/www/html/
+       - ./ssl:/etc/ngnix/ssl/
+     networks:
+       - common

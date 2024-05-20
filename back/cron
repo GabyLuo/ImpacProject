@@ -1,0 +1,6 @@
+# do daily/weekly/monthly maintenance
+# min   hour    day     month   weekday command
+#*/5 * * * * root /var/www/html/cron.sh
+#*/5 * * * * php -q -f /var/www/localhost/htdocs/app/cli.php AssistancesLib setIncidences
+0 7 * * * touch /tmp/prueba-$(date +%d-%m-%Y).test
+# (No Borrar linea final)

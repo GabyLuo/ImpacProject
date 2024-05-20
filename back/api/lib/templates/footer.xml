@@ -1,0 +1,27 @@
+<tr>
+  <td align="center" valign="top" width="100%" style="background-color: #f7f7f7; height: 100px;">
+    <center>
+      <table cellspacing="0" cellpadding="0" width="600" class="w320">
+        <tr>
+          <td class="pull-left mobile-header-padding-left" style="vertical-align: middle;text-align:center;">
+            <a href="">
+              <!-- <img width="130" style="margin-bottom:-20px;margin-top:5px;" src="{##LOGO##}" alt="logo"></a> -->
+              <!-- <img width="130" style="margin-bottom:-20px;margin-top:5px;" src="http://api.westfix.beta.antfarm.mx/public/assets/images/logo.png" alt="logo"> -->
+              <img width="230" style="margin-bottom:-20px;margin-top:5px;" src="http://api.impact.beta.antfarm.mx/public/assets/images/logo.png"></a>
+              <!--<img width="130" style="margin-bottom:-20px;margin-top:5px;" src="{##LOGO##}" alt="logo"></a>-->
+            </td>
+            <td class="pull-right mobile-header-padding-right" style="color: #4d4d4d;">
+              &nbsp;
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 5px 30px 25px;font-size:9px;color:#616161">
+              La información de este correo es confidencial y para uso exclusivo de la(s) persona o entidad de destino; se prohíbe su copia, reproducción o distribución.<br />
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>
+</table>
+</body>

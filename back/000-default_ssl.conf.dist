@@ -1,0 +1,19 @@
+<VirtualHost *:443>
+        DocumentRoot /var/www/html/
+        ServerName corey_back
+        ErrorLog ${APACHE_LOG_DIR}/impact.wasp.mx.log
+        CustomLog ${APACHE_LOG_DIR}/impact.wasp.access.log combined
+
+        SSLEngine on
+        SSLCertificateFile /var/www/html/ssl/wasp21.crt
+        SSLCertificateKeyFile /var/www/html/ssl/wasp21.key
+        SSLCertificateChainFile /etc/apache2/ssl/gatherCA.crt
+
+        <Directory /var/www/html/>
+                AllowOverride All
+                Options Indexes FollowSymLinks
+                DirectoryIndex index.php index.html index.htm
+                Order Allow,Deny
+                Allow from All
+        </Directory>
+</VirtualHost>

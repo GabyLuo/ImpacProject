@@ -1,0 +1,28 @@
+deploy_beta:
+  stage: deploy
+  environment: Beta
+  only:
+    - development
+  script:
+    - export SSHPASS=$USER_DOCKER
+    - sshpass -e rsync --exclude=.git -r ./ developer@mule.wasp.mx:/home/developer/services/impact/ 
+
+deploy_prod_docker:
+  stage: deploy
+  environment: master
+  only:
+    - master
+  script:
+    - export SSHPASS=$USER_DOCKERP
+    - sshpass -e rsync --exclude=.git -r ./ developer@trevize.wasp.mx:/home/developer/services/impact/ 
+
+deploy_produccion:
+ stage: deploy
+ environment: Produccion
+ when: manual
+ only:
+   - master
+ script:
+   - export SSHPASS=$USER_PASSP
+   - sshpass -e scp -o stricthostkeychecking=no -r back/api/* developer@rinzler.antfarm.mx:/home/developer/api.impact.antfarm.mx
+   - sshpass -e scp -o stricthostkeychecking=no -r front/web/prod/* developer@rinzler.antfarm.mx:/home/developer/impact.antfarm.mx

@@ -1,0 +1,150 @@
+<?php
+
+use Phalcon\Mvc\Controller;
+
+class AbonosDocumentosController extends Controller
+{
+
+	public $content = ['result' => 'error', 'message' => ''];
+
+	public function getAll () {
+		$sql="SELECT * from com_abonos_files";
+		$this->content['documentos'] = $this->db->query($sql)->fetchAll();
+        $this->content['result'] = 'success';
+        $this->response->setJsonContent($this->content);
+        $this->response->send();
+	}
+
+    public function getFile($id, $ext)
+    {    
+        //$cotizacion = CotizacionGastos::findFirst($id);
+        $documento = DocumentosAbonosComisiones::findFirst($id);
+        $path = $_SERVER["DOCUMENT_ROOT"] . '/public/assets/abonos_comisiones/' .$documento->id.'.'.$documento->extension;
+        $filetype = mime_content_type($path);   
+        $filesize = filesize($path);       
+        $response = new \Phalcon\Http\Response();
+        $response->setHeader("Cache-Control", 'must-revalidate, post-check=0, pre-check=0');
+        $response->setHeader("Content-Length", $filesize);
+        $response->setContentType($filetype);
+        $response->setFileToSend($path, "\"".$documento->nombre."\"");
+        $response->send();
+        return $response;
+    }
+
+    private function orientation($ruta) {
+        try {
+            $exif = @exif_read_data($ruta);
+            $image = imagecreatefromjpeg($ruta);
+            if(isset($exif) && array_key_exists('Orientation',$exif)) {
+                switch($exif['Orientation']){
+                    case 8:
+                        $image = imagerotate($image,90,0);
+                        break;
+                    case 3:
+                        $image = imagerotate($image,180,0);
+                        break;
+                    case 6:
+                        $image = imagerotate($image,-90,0);
+                        break;
+                }
+            }
+            imagejpeg($image, $ruta);
+        } catch (Exception $e){
+        }
+    }
+
+	public function uploadDocumento()
+    {
+        try {
+            $content = $this->content;
+
+            $tx = $this->transactions->get();
+
+            $request = $this->request->getPost();
+            if ($this->request->hasFiles()) {
+                // $upload_dir = __DIR__ . '../../../public/assets/logos/';
+                $upload_dir = $_SERVER['DOCUMENT_ROOT'] . '/public/assets/abonos_comisiones/';
+                if (!is_dir($upload_dir)) {
+                    mkdir($upload_dir, 0777,true);
+                    chmod($upload_dir, 0777);
+                }
+                //var_dump($imagen_id);
+                foreach ($this->request->getUploadedFiles() as $file) {
+                    $sizeA=($file->getSize()/1000000);
+                    //var_dump($file->getType());
+                    if($sizeA>100||$sizeA===0) {
+                        $content['err'] = 'Archivo demasiado grande';
+                    } else {
+                        if(strtolower($file->getExtension())==='jpg'||strtolower($file->getExtension())==='jpeg'||strtolower($file->getExtension())==='png'||strtolower($file->getExtension())==='pdf' || strtolower($file->getExtension())==='xml' || strtolower($file->getExtension())==='docx') {
+                            //var_dump('renombre');
+                            $archivo = new DocumentosAbonosComisiones();
+                            $archivo->setTransaction($tx);
+                            $archivo->extension = $file->getExtension();
+                            $archivo->abono_id = $request['abono_id'];
+                            $archivo->nombre = $request['nombre'];
+                            if ($archivo->create()) {
+                                $nombre_con_id = $archivo->id .'.'. $file->getExtension();
+                                        // aqui empieza lo de guardar el documento con el numero de id
+                                foreach (glob($upload_dir.$nombre_con_id.'.*') as $nombre_fichero) {
+                                    unlink($nombre_fichero);
+                                }
+                                $file->moveTo($upload_dir . $nombre_con_id);
+                                if (file_exists($upload_dir . $nombre_con_id)) {
+                                    chmod($upload_dir . $nombre_con_id, 0777);
+                                }
+                                if(strtolower($file->getExtension())==='jpg'||strtolower($file->getExtension())==='jpeg'){
+                                    $path=$upload_dir . $nombre_con_id;
+                                    $this->orientation($path);
+                                }
+                                $content['result'] = 'success';
+                                $content['message'] = ['title' => '¡Éxito!', 'content' => 'Se ha guardado el archivo.'];
+                                $tx->commit();
+                            } else {
+                                $this->content['error'] = Helpers::getErrors($archivo);
+                                $content['message'] = ['title' => '¡Error!', 'content' => 'No se pudo guardar el archivo'];
+                                $tx->rollback();
+                            }
+                        }
+                    }
+                }
+            }
+        } catch (Throwable $e) {
+            $content['errors'] = get_class($e) . ": {$e->getMessage()} ({$e->getCode()})" . PHP_EOL;
+        }
+
+        $this->response->setJsonContent($content);
+        $this->response->send();
+    }
+
+    public function deleteFormato () {
+        try {
+            $tx = $this->transactions->get();
+            $request = $this->request->getPost();
+            if ($request['id']) {
+                $documento = DocumentosAbonosComisiones::findFirst($request['id']);
+                $documento->setTransaction($tx);
+
+                if ($documento->delete()) {
+                    $this->content['result'] = 'success';
+                    $nombre_fichero = $_SERVER["DOCUMENT_ROOT"] . '/public/assets/abonos_comisiones/'.$documento->id.'.'.$documento->extension;
+                    if (file_exists($nombre_fichero)) {
+                        unlink($nombre_fichero);
+                    }
+                    $this->content['message'] = ['title' => '¡Éxito!', 'content' => 'Se ha eliminado el archivo.'];
+                    $this->content['result'] = 'success';
+                    $tx->commit();
+                } else {
+                    $this->content['result'] = 'error';
+                    $this->content['error'] = Helpers::getErrors($documento);
+                    $this->content['message'] = ['title' => '¡Éxito!', 'content' => 'No se ha podido eliminar el archivo.'];
+                    $tx->rollback();
+                }
+            }
+        } catch (Throwable $e) {
+            $this->content['errors'] = get_class($e) . ": {$e->getMessage()} ({$e->getCode()})" . PHP_EOL;
+        }
+
+        $this->response->setJsonContent($this->content);
+        $this->response->send();
+    }
+}

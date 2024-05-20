@@ -1,0 +1,65 @@
+<tr>
+  <td align="center" valign="top" width="100%" style="background-color: #f7f7f7;" class="content-padding">
+    <center>
+      <table cellspacing="0" cellpadding="0" width="80%" class="w320">
+        <tr>
+          <td class="mini-block-container">
+            <table cellspacing="0" cellpadding="0" width="100%"  style="border-collapse:separate !important;">
+              <tr>
+                <td class="mini-block">
+                  <table cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td>
+                        <table cellspacing="0" cellpadding="3" width="100%">
+                          <tr>
+                            <td colspan="2" style="text-align:left; font-size:24px; color:#028c2a;">
+                              Se ha agregado un comentario para usted.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;" width="130">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" style="text-align:left; font-size:14px; color:#1D2939;">
+                              El usuario {##AUTOR##} ha agregado un comentario en la solicitud {##SOLICITUD##}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" style="text-align:left; font-size:14px; color:#1D2939;">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" style="text-align:left; font-size:14px; color:#1D2939;">
+                              Para poder ver el comentario, revise en el sistema la sección de solicitudes.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;" width="130">
+                              &nbsp;
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <tr>
+                        <td style="text-align:left;" width="130">
+                          &nbsp;
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:left;" width="130">
+                          &nbsp;
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>

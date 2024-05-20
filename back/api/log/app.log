@@ -1,0 +1,178 @@
+[Fri, 01 Feb 19 17:14:59 -0600][DEBUG] stdClass Object
+(
+    [iat] => 1549056036
+    [jti] => sxRFkxmTNLuifAWIeEccx6PsrN0hUXuyNV17WIBdjWs=
+    [iss] => brego-erp.localhost
+    [nbf] => 1549056036
+    [exp] => 1549074036
+    [data] => stdClass Object
+        (
+            [user_id] => 1
+            [user_name] => sa@smartcops.com.mx
+            [account_id] => 1
+        )
+
+)
+
+[Fri, 01 Feb 19 17:14:59 -0600][DEBUG] 
+[Fri, 01 Feb 19 17:28:10 -0600][DEBUG] stdClass Object
+(
+    [iat] => 1549056036
+    [jti] => sxRFkxmTNLuifAWIeEccx6PsrN0hUXuyNV17WIBdjWs=
+    [iss] => brego-erp.localhost
+    [nbf] => 1549056036
+    [exp] => 1549074036
+    [data] => stdClass Object
+        (
+            [user_id] => 1
+            [user_name] => sa@smartcops.com.mx
+            [account_id] => 1
+        )
+
+)
+
+[Fri, 01 Feb 19 17:28:10 -0600][DEBUG] SELECT * FROM v_fin_patrones where  :account_id = '1'  and ( razon_social ILIKE :razon_social: OR rfc ILIKE :rfc: OR calle ILIKE :calle: OR num_ext ILIKE :num_ext: OR num_int ILIKE :num_int: )  
+[Fri, 01 Feb 19 17:30:04 -0600][DEBUG] stdClass Object
+(
+    [iat] => 1549056036
+    [jti] => sxRFkxmTNLuifAWIeEccx6PsrN0hUXuyNV17WIBdjWs=
+    [iss] => brego-erp.localhost
+    [nbf] => 1549056036
+    [exp] => 1549074036
+    [data] => stdClass Object
+        (
+            [user_id] => 1
+            [user_name] => sa@smartcops.com.mx
+            [account_id] => 1
+        )
+
+)
+
+[Fri, 01 Feb 19 17:30:04 -0600][DEBUG] SELECT * FROM v_fin_patrones where  account_id = :account_id  and ( razon_social ILIKE :razon_social: OR rfc ILIKE :rfc: OR calle ILIKE :calle: OR num_ext ILIKE :num_ext: OR num_int ILIKE :num_int: )  
+[Fri, 01 Feb 19 17:30:27 -0600][DEBUG] stdClass Object
+(
+    [iat] => 1549056036
+    [jti] => sxRFkxmTNLuifAWIeEccx6PsrN0hUXuyNV17WIBdjWs=
+    [iss] => brego-erp.localhost
+    [nbf] => 1549056036
+    [exp] => 1549074036
+    [data] => stdClass Object
+        (
+            [user_id] => 1
+            [user_name] => sa@smartcops.com.mx
+            [account_id] => 1
+        )
+
+)
+
+[Fri, 01 Feb 19 17:30:27 -0600][DEBUG] SELECT * FROM v_fin_patrones where  account_id = :account_id  and ( razon_social ILIKE :razon_social: OR rfc ILIKE :rfc: OR calle ILIKE :calle: OR num_ext ILIKE :num_ext: OR num_int ILIKE :num_int: )  
+[Fri, 01 Feb 19 17:31:30 -0600][DEBUG] stdClass Object
+(
+    [iat] => 1549056036
+    [jti] => sxRFkxmTNLuifAWIeEccx6PsrN0hUXuyNV17WIBdjWs=
+    [iss] => brego-erp.localhost
+    [nbf] => 1549056036
+    [exp] => 1549074036
+    [data] => stdClass Object
+        (
+            [user_id] => 1
+            [user_name] => sa@smartcops.com.mx
+            [account_id] => 1
+        )
+
+)
+
+[Fri, 01 Feb 19 17:31:30 -0600][DEBUG] SELECT * FROM v_fin_patrones where  account_id = :account_id:  and ( razon_social ILIKE :razon_social: OR rfc ILIKE :rfc: OR calle ILIKE :calle: OR num_ext ILIKE :num_ext: OR num_int ILIKE :num_int: )  
+[Fri, 01 Feb 19 17:32:21 -0600][DEBUG] stdClass Object
+(
+    [iat] => 1549056036
+    [jti] => sxRFkxmTNLuifAWIeEccx6PsrN0hUXuyNV17WIBdjWs=
+    [iss] => brego-erp.localhost
+    [nbf] => 1549056036
+    [exp] => 1549074036
+    [data] => stdClass Object
+        (
+            [user_id] => 1
+            [user_name] => sa@smartcops.com.mx
+            [account_id] => 1
+        )
+
+)
+
+[Fri, 01 Feb 19 17:32:21 -0600][DEBUG] SELECT * FROM v_fin_patrones where  account_id = :account_id:  and ( razon_social ILIKE :razon_social: OR rfc ILIKE :rfc: OR calle ILIKE :calle: OR num_ext ILIKE :num_ext: OR num_int ILIKE :num_int: )  
+[Fri, 01 Feb 19 17:32:21 -0600][DEBUG] Array
+(
+    [account_id] => 1
+    [razon_social] => %arra%
+    [rfc] => %arra%
+    [calle] => %arra%
+    [num_ext] => %arra%
+    [num_int] => %arra%
+)
+
+[Mon, 18 Feb 19 17:55:58 +0000][DEBUG] stdClass Object
+(
+    [iat] => 1550512547
+    [jti] => eVISS/ooRqOWbfJl9uC6kSxPNCZKAqA1Z2NJ0Ru2JlI=
+    [iss] => api.bregoerp.localhost
+    [nbf] => 1550512547
+    [exp] => 1550530547
+    [data] => stdClass Object
+        (
+            [user_id] => 1
+            [user_name] => sa@smartcops.com.mx
+            [account_id] => 1
+        )
+
+)
+
+[Mon, 18 Feb 19 17:55:59 +0000][DEBUG] SELECT * FROM v_fin_patrones where  account_id = :account_id:  
+[Mon, 18 Feb 19 17:55:59 +0000][DEBUG] Array
+(
+    [account_id] => 1
+)
+
+[Tue, 19 Feb 19 19:36:42 +0100][DEBUG] stdClass Object
+(
+    [iat] => 1550601374
+    [jti] => n3o8EU4p4mlOBqOMKSiHxXORlm+VuAfSa55QQLhWIw0=
+    [iss] => api.brego-erp
+    [nbf] => 1550601374
+    [exp] => 1550619374
+    [data] => stdClass Object
+        (
+            [user_id] => 1
+            [user_name] => sa@smartcops.com.mx
+            [account_id] => 1
+        )
+
+)
+
+[Tue, 19 Feb 19 19:36:42 +0100][DEBUG] SELECT * FROM v_fin_patrones where  account_id = :account_id:  
+[Tue, 19 Feb 19 19:36:42 +0100][DEBUG] Array
+(
+    [account_id] => 1
+)
+
+[Tue, 19 Feb 19 19:38:39 +0100][DEBUG] stdClass Object
+(
+    [iat] => 1550601440
+    [jti] => 0HS6WL7wOHWqQVPQ1K3yf+P188aFcyypdXPw3nwDnT8=
+    [iss] => api.brego-erp
+    [nbf] => 1550601440
+    [exp] => 1550619440
+    [data] => stdClass Object
+        (
+            [user_id] => 1
+            [user_name] => sa@brego.com.mx
+            [account_id] => 1
+        )
+
+)
+
+[Tue, 19 Feb 19 19:38:39 +0100][DEBUG] SELECT * FROM v_fin_patrones where  account_id = :account_id:  
+[Tue, 19 Feb 19 19:38:39 +0100][DEBUG] Array
+(
+    [account_id] => 1
+)
+

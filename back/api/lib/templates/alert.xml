@@ -1,0 +1,152 @@
+<tr>
+  <td align="center" valign="top" width="100%" style="background-color: #f7f7f7;" class="content-padding">
+    <center>
+      <table cellspacing="0" cellpadding="0" width="80%" class="w320">
+        <tr>
+          <td class="mini-block-container">
+            <table cellspacing="0" cellpadding="0" width="100%"  style="border-collapse:separate !important;">
+              <tr>
+                <td class="mini-block">
+                  <table cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td>
+                        <table cellspacing="0" cellpadding="3" width="100%">
+                          <tr>
+                            <td colspan="2" style="text-align:left; font-size:24px; color:#028c2a;">
+                              Alerta del sistema!
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;" width="130">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" style="text-align:left; font-size:14px; color:#1D2939;">
+                              Has recibido una alerta de movimiento del usuario {##USUARIO##} al día {##FECHA##} con artículos que podrán afectar el Stock!
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" style="text-align:left; font-size:14px; color:#1D2939;">
+                              Ingresa con tu cuenta de usuario para revisar el movimiento!
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" style="text-align:left; font-size:14px; color:#1D2939;">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" style="text-align:left; font-size:14px; color:#1D2939;">
+                               Detalle del movimiento:
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;" width="130">
+                              <table cellspacing="0" cellpadding="3" width="100%">
+	                            <tr>
+	                              <td style="text-align:left;" width="130">
+	                                Tipo:
+	                              </td>
+	                              <td style="text-align:left; color:#1D2939;">	
+	                                 {##TIPOMOVIMIENTO##}
+	                              </td>
+	                            </tr>
+	                            <tr>
+	                              <td style="text-align:left;" width="130">
+	                                Empresa:
+	                              </td>
+	                              <td style="text-align:left; color:#1D2939;">	
+	                                 {##EMPRESA##}
+	                              </td>
+	                            </tr>
+	                            <tr>
+	                              <td style="text-align:left;" width="130">
+	                                Almacén:
+	                              </td>
+	                              <td style="text-align:left; color:#1D2939;">	
+	                                 {##ALMACEN##}
+	                              </td>
+	                            </tr>
+	                            <tr>
+	                              <td style="text-align:left;" width="130">
+	                                Folio:
+	                              </td>
+	                              <td style="text-align:left; color:#1D2939;">	
+	                                {##FOLIO##}
+	                              </td>
+	                            </tr>
+	                            <tr>
+	                              <td style="text-align:left;" width="130">
+	                                Num. Transacción:
+	                              </td>
+	                              <td style="text-align:left; color:#1D2939;">	
+	                                {##NT##}
+	                              </td>
+	                            </tr>
+	                            <tr>
+	                              <td style="text-align:left;" width="130">
+	                                Fecha:
+	                              </td>
+	                              <td style="text-align:left; color:#1D2939;">	
+	                                {##FECHAMOV##}
+	                              </td>
+	                            </tr>
+	                            <tr>
+	                              <td style="text-align:left;" width="130">
+	                                Usuario:
+	                              </td>
+	                              <td style="text-align:left; color:#1D2939;">	
+	                                {##USUARIO##}
+	                              </td>
+	                            </tr>
+	                            <tr>
+	                              <td style="text-align:left;" width="130">
+	                                Estatus:
+	                              </td>
+	                              <td style="text-align:left; color:#1D2939;">	
+	                               <label style="background-color: yellow;border-color: yellow;display: inline;padding: .3em .7em .4em;font-size: 84%;font-weight: 600;line-height: 24px;color: #515151;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;">
+                                   		<!-- {##ESTATUS##} -->Pendiente
+                                	</label>  
+	                              </td>
+	                            </tr>
+                          		</table>
+                            </td>
+                          </tr>
+                          <tr style="width: 100%">
+                            <td colspan="2" style="text-align:center; font-size:14px; color:#1D2939;">
+                              Sistema Westfix, Corey Al Agro
+                            </td>
+                          </tr>
+                          <tr style="width: 100%">
+                            <td colspan="2" style="text-align:center; font-size:14px; color:#1D2939;">
+                              {##FECHA##}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;" width="130">
+                              &nbsp;
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <tr>
+                        <td style="text-align:left;" width="130">
+                          &nbsp;
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:left;" width="130">
+                          &nbsp;
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>

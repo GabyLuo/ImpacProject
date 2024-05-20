@@ -1,0 +1,75 @@
+<tr>
+  <td align="center" valign="top" width="100%" style="background-color: #f7f7f7;" class="content-padding">
+    <center>
+      <table cellspacing="0" cellpadding="0" width="80%" class="w320">
+        <tr>
+          <td class="mini-block-container">
+            <table cellspacing="0" cellpadding="0" width="100%"  style="border-collapse:separate !important;">
+              <tr>
+                <td class="mini-block">
+                  <table cellpadding="0" cellspacing="0" width="100%">
+                    <tr>
+                      <td>
+                        <table cellspacing="0" cellpadding="3" width="100%">
+                          <tr>
+                            <td colspan="2" style="text-align:left; font-size:24px; color:#028c2a;">
+                              Alerta del sistema!
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;" width="130">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" style="text-align:left; font-size:14px; color:#1D2939;">
+                               Ha recibido una nueva Orden de Producci&oacute;n!
+                            </td>
+                          </tr>
+                          <tr>
+                            <td colspan="2" style="text-align:left; font-size:14px; color:#1D2939;">
+                              Se le notifica que para la creaci&oacute;n de la OP <b>{##FOLIO##}</b> es necesario preparar el producto para procesar con la fabricaci&oacute;n. Los materiales estan enlistados en la OP generada en el movimiento de la orden, podr&aacute; consultarla e imprimirla desde el mismo sistema y una vez preparado CAMBIE el ESTATUS de la orden dando clic en el bot&oacute;n ("Surtir").
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;" width="130">
+                              &nbsp;
+                            </td>
+                          </tr>
+                          <tr style="width: 100%">
+                            <td colspan="2" style="text-align:center; font-size:14px; color:#1D2939;">
+                              Sistema Westfix, Corey Al Agro
+                            </td>
+                          </tr>
+                          <tr style="width: 100%">
+                            <td colspan="2" style="text-align:center; font-size:14px; color:#1D2939;">
+                              {##FECHA##}
+                            </td>
+                          </tr>
+                          <tr>
+                            <td style="text-align:left;" width="130">
+                              &nbsp;
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                      <tr>
+                        <td style="text-align:left;" width="130">
+                          &nbsp;
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="text-align:left;" width="130">
+                          &nbsp;
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </center>
+    </td>
+  </tr>

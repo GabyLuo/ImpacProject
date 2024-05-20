@@ -1,0 +1,1 @@
+alter table inv_tipos_presentaciones add column codigo_sat text;
